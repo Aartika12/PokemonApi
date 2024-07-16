@@ -1,0 +1,92 @@
+body {
+  margin:0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: white;
+  color: black;
+  text-align: left;
+  position: relative;
+/* background-image: url('https://wallpapercave.com/wp/Wbo1FUz.jpg'); */
+}
+.app-container h1{
+  width:100%;
+  position: fixed;
+  background-color: red;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  height : 110px;
+  text-align: center;
+  font-size: 80px;
+}
+.app-container {
+ 
+  max-width: 2500px;
+  margin: 0;
+  padding: 0rem;
+  text-align: left;
+}
+
+.app-title {
+  font-size: 3.5rem;
+  margin-bottom: 0rem;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+}
+
+
+.pokemon-container {
+
+  background-color:red;
+ 
+  border-radius: 0px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.all-container {
+ 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.thumb-container {
+  background-color: greenyellow;
+  padding: 1rem;
+  margin: 1rem;
+  border: 3px solid black;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.thumb-container:hover {
+  transform: translateY(-5px);
+}
+
+.thumb-container h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.thumb-container img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.load-more {
+  background-color: #ffcc80;
+  color: #333;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.load-more:hover {
+  background-color: #ffa726;
+}
+
