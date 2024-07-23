@@ -1,51 +1,46 @@
+
+/* Base Styles */
 body {
-  margin:0;
+  margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: white;
+  background-color: rgb(255, 0, 0); /* Ensure background color is red */
   color: black;
   text-align: left;
-  position: relative;
-/* background-image: url('https://wallpapercave.com/wp/Wbo1FUz.jpg'); */
+  position: relative; 
+  overflow-x: hidden; /* Prevent horizontal overflow */
 }
-.app-container h1{
-  width:100%;
+
+.app-container {
+  max-width: 2500px;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.app-container h1 {
+  width: 100%;
   position: fixed;
   background-color: red;
   margin-top: 0px;
   margin-bottom: 0px;
-  height : 110px;
+  height: 110px;
   text-align: center;
   font-size: 80px;
+  top: 0;
+  left: 0;
 }
-.app-container {
- 
-  max-width: 2500px;
-  margin: 0;
-  padding: 0rem;
-  text-align: left;
-}
-
-.app-title {
-  font-size: 3.5rem;
-  margin-bottom: 0rem;
-  margin-block-start: 0px;
-  margin-block-end: 0px;
-}
-
 
 .pokemon-container {
-
-  background-color:red;
- 
-  border-radius: 0px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: red;
+  border-radius: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
 }
 
 .all-container {
- 
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 }
 
 .thumb-container {
@@ -56,6 +51,7 @@ body {
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease-in-out;
+  flex: 1 1 calc(25% - 2rem); /* Base layout for larger screens */
 }
 
 .thumb-container:hover {
@@ -68,14 +64,15 @@ body {
 }
 
 .thumb-container img {
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
   border-radius: 50%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .load-more {
+  display: flex;
   background-color: #ffcc80;
   color: #333;
   border: none;
@@ -84,9 +81,70 @@ body {
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto; /* Center the button */
 }
 
 .load-more:hover {
   background-color: #ffa726;
 }
 
+.play-sound-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 1;
+  margin-top: 10px;
+}
+
+.play-sound-button .fa-volume-up {
+  font-size: 24px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.play-sound-button:hover .fa-volume-up {
+  color: #ffa726;
+}
+
+.loading-container {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .app-container h1 {
+    font-size: 6vw; /* Adjust font size */
+  }
+
+  .thumb-container {
+    flex: 1 1 calc(33.33% - 2rem); /* Adjust for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .app-container h1 {
+    font-size: 7vw; /* Adjust font size */
+  }
+
+  .thumb-container {
+    flex: 1 1 calc(50% - 2rem); /* Adjust for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .app-container h1 {
+    font-size: 8vw; /* Adjust font size */
+  }
+
+  .thumb-container {
+    flex: 1 1 calc(100% - 2rem); /* Full width on very small screens */
+  }
+
+  .load-more {
+    font-size: 0.8rem; /* Adjust button font size */
+    width: 90%; /* Make button responsive */
+  }
+}
