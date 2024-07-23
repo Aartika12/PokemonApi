@@ -60,9 +60,7 @@
 
 
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faVolumeUp } from '@fortawesome/free-solid-svg-icons';
-import './index.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';import './index.css';
 import { AiFillSound } from "react-icons/ai";
 
 const PokemonThumb = ({ name, image, type, sound }) => {
