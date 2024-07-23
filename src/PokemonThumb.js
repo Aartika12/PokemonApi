@@ -61,8 +61,9 @@
 
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faVolumeUp } from '@fortawesome/free-solid-svg-icons';
+// import { faVolumeUp } from '@fortawesome/free-solid-svg-icons';
 import './index.css';
+import { AiFillSound } from "react-icons/ai";
 
 const PokemonThumb = ({ name, image, type, sound }) => {
   const style = `thumb-container ${type}`;
@@ -79,7 +80,7 @@ const PokemonThumb = ({ name, image, type, sound }) => {
         <h3>{name}</h3>
         <small>Type: {type}</small>
         <button onClick={playSound} className="play-sound-button">
-          <FontAwesomeIcon icon={faVolumeUp} />
+          <AiFillSound icon={AiFillSound} />
         </button>
       </div>
     </div>
@@ -87,3 +88,5 @@ const PokemonThumb = ({ name, image, type, sound }) => {
 };
 
 export default PokemonThumb;
+
+
