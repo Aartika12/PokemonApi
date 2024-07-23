@@ -959,7 +959,7 @@ const App = () => {
       const res = await fetch(loadMore);
       const data = await res.json();
 
-      console.log('Fetched data:', data); // Debugging line
+      console.log('Fetched data:', data); // Debugging linee
 
       // Check if there's more data to load
       if (data.next) {
